@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
+
+
+@layer components {
+    .inner-box-shadow-xl{
+        box-shadow: 100px 100px 50px #00031c inset, -100px -100px 100px #00031c inset;
+    }
+}
+
+
 @tailwind utilities;
+

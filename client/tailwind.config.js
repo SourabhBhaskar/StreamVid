@@ -11,28 +11,33 @@ module.exports = {
         'util-color-1': '#6c52ee',
         'util-color-2': '#7b61ff',
         'util-color-3': '#1877f2',
-        '': '',
-        '': '',
-        '': '',
-        '': '',
-        '': '',
       },
 
       borderColor:{
-        'primary-color': '#fff5',
+        'primary-color': '#ffffff',
+        'primary-hover-color': '#7b61ff',
         'secondary-color': '#7b61ff',
+        'secondary-hover-color': '#ffffff',
+        'light-color': '#7b61ff',
+        'light-hover-color': '#ffffff'
       },
 
       outlineColor: {
         'primary-color': '#ffffff',
+        'primary-hover-color': '#7b61ff',
         'secondary-color': '#7b61ff',
+        'secondary-hover-color': '#ffffff',
+        'light-color': '#7b61ff',
+        'light-hover-color': '#ffffff'
       },
     
       textColor: {
         'primary-color': '#ffffff',
         'primary-hover-color': '#7b61ff',
         'secondary-color': '#7b61ff',
-        'secondary-hover-color': '',
+        'secondary-hover-color': '#ffffff',
+        'light-color': '#cccdd2',
+        'light-hover-color': '#ffffff'
       },
 
       backgroundColor: {
@@ -47,8 +52,6 @@ module.exports = {
         'primary-font-light': ['Metropolitano-Light', 'sans-serif'],
         'primary-font-bold': ['Metropolitano-Bold', 'sans-serif'],
       },
-
-      
     },
   },
   plugins: [],

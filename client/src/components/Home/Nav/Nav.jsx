@@ -60,7 +60,7 @@ function Navigation() {
   ];
 
   return (
-    <nav className="w-full h-[75px] flex items-center justify-between px-2 py-4 xl:px-16">
+    <nav className="w-full h-[75px] flex items-center justify-between py-4">
       <div className="w-auto h-full flex items-center gap-4">
         <span className="h-full flex items-center"><NavigationLogo /></span>
         <span className="h-full hidden md:flex items-center"><NavigationItemList homepageCategories={homepageCategories} movieCategories={movieCategories} tvShowCategories={tvShowCategories} webSeriesCategories={webSeriesCategories} sportsCategories={sportsCategories} /></span>
