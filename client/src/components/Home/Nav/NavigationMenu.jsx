@@ -1,73 +1,74 @@
 import React, { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faArrowRight, faChevronDown } from '@fortawesome/free-solid-svg-icons';
+import { Icon } from '@iconify/react';
+import { icons } from '../../../utils/icons';
 import NavigationLogo from './NavigationLogo';
 import NavigationSearch from './NavigationSearch';
+import NavigationSubMenu from './NavigationSubMenu';
 import NavigationSubscribeBtn from './NavigationSubscribeBtn';
 
 
 
-function NavigationSubMenuItem() {
-  const [menu, setMenu] = useState(false);
-
-  return (
-    <li onClick={() => setMenu(!menu)} className='w-full h-auto'>
-      <div className='w-full h-[45px] flex justify-between items-center border-b-[1px] border-primary-color'>
-        <a href='#'>Home</a>
-        <FontAwesomeIcon icon={faChevronDown} transform={menu && 'rotate-180'} fontSize={12} className='transition-all' />
-      </div>
-      { menu && <ul className='w-full h-full'>
-        <li className='w-full h-[45px] flex items-center px-4 border-b-[1px] border-primary-color'><a href='#'>Home</a></li>
-      </ul>}
-    </li>
-  )
-}
-
-function NavigationMenu() {
+// Menu
+function NavigationMenu({ homepageCategories, movieCategories, tvShowCategories, webSeriesCategories, sportsCategories }) {
   const menuRef = useRef(null);
+  const menuContainerRef = useRef(null);
   const [menu, setMenu] = useState(false);
 
   useEffect(() =>{
+    const parentElement = menuContainerRef.current;
     const element = menuRef.current;
     if(element){
       if(menu){
-        gsap.fromTo(element, { left: '-100%' }, { left: '0%', display: 'flex'});
+        gsap.to(parentElement, { display: 'block', opacity: 1});
+        gsap.fromTo(element, { left: '-100%' }, { left: '0%'});
       }else{
-        gsap.fromTo(element, { left: '0%'}, { left: '-100% ', display: 'none'});
+        gsap.fromTo(element, { left: '0%'}, { left: '-100% '});
+        gsap.to(parentElement, { display: 'none', opacity: 0 });
       }
     }
   }, [menu])
 
+  const handleClick = (e) => {
+    e.stopPropagation();
+    const id = e.target.id;
+    if(id){
+      setMenu(!menu);
+    }
+  }
+
   return (
-    <div className='border-2'>
-        <button onClick={() => setMenu(true)} className='w-auto h-auto border-2 flex items-center'>
-          <FontAwesomeIcon icon={faBars} fontSize={20} />
+    <>
+        <button onClick={() => setMenu(true)} className='w-auto h-full flex items-center'>
+          <span>
+            <Icon icon={icons.menu} fontSize={25} />
+          </span>
         </button>
-        {/* <div ref={menuRef} className='border-2 w-[70%] max-w-[350px] h-screen hidden flex-col fixed top-0 shadow-md px-2 bg-primary-color '>
-          
-          <nav className="w-full h-[75px] flex items-center justify-between px-2 py-4">
-            <div className="w-auto h-full flex items-center gap-4">
-              <span className="h-full flex items-center"><NavigationLogo /></span>
+        <div ref={menuContainerRef} onClick={handleClick} id='parent' className={`w-screen h-screen fixed top-0 left-0 hidden bg-secondary-hover-color`}>
+          <div ref={menuRef} className='w-[80%] sm:w-[60%] h-screen flex flex-col fixed top-0 shadow-md bg-primary-color'>
+            <div className="w-full h-[75px] flex-shrink-0 flex items-center justify-between px-4">
+              <NavigationLogo />
             </div>
-          </nav>
-
-          <nav className="w-full h-[75px] flex items-center justify-between px-2 py-4">
-            <div className="w-full h-full flex items-center justify-between gap-4">
-              <span className="h-full w-full flex items-center "><NavigationSearch /></span>
+            <div className="w-full h-[75px] flex-shrink-0 flex items-center justify-between py-4 px-4">
+              <NavigationSearch />
             </div>
-          </nav>
-
-          <div className='flex-grow p-2 overflow-hidden'>
-            <ul className='w-full h-full'>
-              <NavigationSubMenuItem />
-              <NavigationSubMenuItem />
-              <NavigationSubMenuItem />
-            </ul>
-          </div>
-
-        </div> */}
-    </div>
+            <div className='flex-grow px-4 overflow-x-hidden overflow-y-auto'>
+              <ul className='w-full h-full'>
+                <NavigationSubMenu menuName='Home' menuList={homepageCategories} />
+                <NavigationSubMenu menuName='Movies' menuList={movieCategories} />
+                <NavigationSubMenu menuName='TV Shows' menuList={tvShowCategories} />
+                <NavigationSubMenu menuName='Web Series' menuList={webSeriesCategories}  />
+                <NavigationSubMenu menuName='Sports' menuList={sportsCategories} />
+                <div className='w-full h-[80px] py-4'>
+                  <div className='w-full h-full'>
+                    <NavigationSubscribeBtn />
+                  </div>
+                </div>
+              </ul>
+            </div>
+        </div>
+      </div>
+    </>
   )
 }
 

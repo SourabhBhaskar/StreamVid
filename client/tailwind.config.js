@@ -5,7 +5,6 @@ module.exports = {
   ],
   theme: {
     extend: {
-
       colors: {
         'primary-color': '#00031c',
         'secondary-color': '#7b61ff',
@@ -38,16 +37,17 @@ module.exports = {
 
       backgroundColor: {
         'primary-color': '#00031c',
-        'primary-hover-color': '#fff1',
+        'primary-hover-color': '#191c33',
         'secondary-color': '#7b61ff',
-        'secondary-hover-color': '',
+        'secondary-hover-color': '#191c33aa',
       },
 
       fontFamily: {
         'primary-font-regular': ['Metropolitano-Regular', 'sans-serif'],
         'primary-font-light': ['Metropolitano-Light', 'sans-serif'],
         'primary-font-bold': ['Metropolitano-Bold', 'sans-serif'],
-      }
+      },
+
       
     },
   },

@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import gsap from 'gsap';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCircleNotch, faSearch } from '@fortawesome/free-solid-svg-icons';
+import { Icon } from '@iconify/react';
+import { icons } from '../../../utils/icons';
 
 
 function NavigationSearch() {
@@ -41,7 +41,9 @@ function NavigationSearch() {
   return (
     <div className="w-full h-full flex items-center relative border-[1px] border-primary-color rounded-md hover:ring-2 ring-secondary-color ">
         <input type="text" placeholder="Search Movies, Tv Shows, Web Series" onChange={handleChange} className="w-full min-w-[200px] h-full rounded-md bg-transparent pl-2 placeholder:text-sm placeholder:truncate focus:outline-none transition-all" />
-        <FontAwesomeIcon icon={isSearching ? faCircleNotch : faSearch} spin={isSearching} className="p-4" />
+        <span className='h-auto aspect-square p-2'>
+          <Icon icon={isSearching ? icons.animatedSearchingIcon : icons.search} fontSize={25} />
+        </span>
         <ul
           ref={searchListRef}
           className="hidden w-full bg-primary-hover-color absolute z-10 left-0 rounded-md p-4 shadow-md">
