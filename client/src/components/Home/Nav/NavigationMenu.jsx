@@ -5,7 +5,7 @@ import { icons } from '../../../utils/icons';
 import NavigationLogo from './NavigationLogo';
 import NavigationSearch from './NavigationSearch';
 import NavigationSubMenu from './NavigationSubMenu';
-import NavigationSubscribeBtn from './NavigationSubscribeBtn';
+import BlueGradientBtn from '../Buttons/BlueGradientBtn';
 
 
 
@@ -53,7 +53,7 @@ function NavigationMenu({ homepageCategories, movieCategories, tvShowCategories,
             <NavigationSubMenu menuName='Sports' menuList={sportsCategories} />
             <div className='w-full h-[80px] py-4'>
               <div className='w-full h-full'>
-                <NavigationSubscribeBtn />
+                <BlueGradientBtn text={'Subscribe'} />
               </div>
             </div>
           </ul>

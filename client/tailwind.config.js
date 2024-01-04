@@ -21,6 +21,7 @@ module.exports = {
         'util-color-1': '#6c52ee',
         'util-color-2': '#7b61ff',
         'util-color-3': '#1877f2',
+        'util-light': '#fff2'
       },
 
       borderColor:{
