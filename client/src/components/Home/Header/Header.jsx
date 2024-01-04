@@ -47,10 +47,10 @@ function Poster() {
 
 function Header({ children }) {
     return (
-        <div className='w-full h-auto xxs:aspect-video min-h-[500px] max-h-screen flex flex-col relative overflow-hidden'>
+        <div className='w-full h-auto xxs:aspect-video min-h-[400px] max-h-screen flex flex-col relative overflow-hidden'>
             <iframe 
                 className='w-full h-full absolute' 
-                src="https://www.youtube.com/embed/tgbNymZ7vqY?mute=1&autoplay=1"
+                src="https://www.youtube.com/embed/6ZfuNTqbHE8?si=5Sjai3MldcnSv4zZ?mute=1&autoplay=1"
                 title="YouTube video player" 
             />
             <div className='w-full h-full absolute inner-box-shadow-xl'></div>

@@ -69,7 +69,7 @@ function CardSlider({ name, children}) {
           <Icon icon={icons.right} fontSize={18} />
         </button>
       </div>
-      <div ref={cardContainer} className="w-fit h-auto flex">
+      <div ref={cardContainer} className="w-fit h-auto flex gap-2">
         {children}
       </div>
       <SliderAbsoluteButtons onClickLeft={handlePrev} onClickRight={handleNext} />
