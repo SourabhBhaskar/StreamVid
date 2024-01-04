@@ -21,17 +21,17 @@ function NavigationSubMenu({ menuName = null, menuList = [] }) {
     }, [menu])
   
     return (
-      <li ref={menuRef} className='w-full h-[45px] overflow-hidden md:hidden'>
-        <div className='w-full h-[45px] flex justify-between items-center border-b-[1px] border-primary-color'>
-          <a href='#' className='font-semibold sm:font-normal'>{menuName}</a>
-          <button onClick={() => setMenu(!menu)} className='h-full aspect-square flex items-center justify-end '>
+      <li onClick={() => setMenu(!menu)} ref={menuRef} className='w-full h-[45px] overflow-hidden md:hidden cursor-pointer'>
+        <div className='w-full h-[45px] flex justify-between items-center border-b-[1px] border-light-color'>
+          <a href='#' className='w-full truncate'>{menuName}</a>
+          <button className='h-full aspect-square flex items-center justify-end '>
             <Icon icon={icons.expend} fontSize={20} className={`transition-all duration-300 ${menu ? 'rotate-180' : 'rotate-0'}`} />
           </button>
         </div>
         <ul className='w-full h-auto px-4'>
           {menuList.map((value, index) => 
-            <li key={index} className='w-full h-[45px] flex justify-between items-center border-b-[1px] border-primary-color hover:text-primary-hover-color transition-all'>
-              <a href='#' className='hover:translate-x-2 transition-all'>{value.text}</a>
+            <li key={index} className='w-full h-[45px] flex justify-between items-center border-b-[1px] border-light-color hover:text-primary-hover-color transition-all'>
+              <a href='#' className='hover:translate-x-2 transition-all w-full truncate'>{value.text}</a>
             </li>)}
         </ul>
       </li>

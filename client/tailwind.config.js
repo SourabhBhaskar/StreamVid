@@ -5,6 +5,16 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens:{
+        'xxs':'320px',
+        'xs': '412px',
+        'sm': '640px',
+        'md': '768px',
+        'lg': '1024px',
+        'xl': '1280px',
+        '2xl': '1536px',
+      },
+
       colors: {
         'primary-color': '#00031c',
         'secondary-color': '#7b61ff',
@@ -18,7 +28,7 @@ module.exports = {
         'primary-hover-color': '#7b61ff',
         'secondary-color': '#7b61ff',
         'secondary-hover-color': '#ffffff',
-        'light-color': '#7b61ff',
+        'light-color': '#ebebeb55',
         'light-hover-color': '#ffffff'
       },
 

@@ -39,8 +39,8 @@ function NavigationSearch() {
     }
 
   return (
-    <div className="w-full h-full flex items-center relative border-[1px] border-primary-color rounded-md hover:ring-2 ring-secondary-color ">
-        <input type="text" placeholder="Search Movies, Tv Shows, Web Series" onChange={handleChange} className="w-full min-w-[200px] h-full rounded-md bg-transparent pl-2 placeholder:text-sm placeholder:truncate focus:outline-none transition-all" />
+    <div className="w-full h-full flex items-center relative border-[1px] border-light-color rounded-md hover:ring-2 ring-secondary-color ">
+        <input type="text" placeholder="Search Movies, Tv Shows, Web Series" onChange={handleChange} className="w-full h-full  rounded-md bg-transparent pl-2 truncate placeholder:text-sm focus:outline-none transition-all" />
         <span className='h-auto aspect-square p-2'>
           <Icon icon={isSearching ? icons.animatedSearchingIcon : icons.search} fontSize={25} />
         </span>

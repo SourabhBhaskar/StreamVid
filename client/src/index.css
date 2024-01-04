@@ -4,8 +4,12 @@
 
 @layer components {
     .inner-box-shadow-xl{
-        box-shadow: 100px 100px 50px #00031c inset, -100px -100px 100px #00031c inset;
+        box-shadow: 10vw 10vw 200px #00031c inset,-10vw -10vw 200px #00031c inset;
     }
+
+    .hide-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
 }
 
 
