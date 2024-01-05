@@ -1,14 +1,14 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Icon } from '@iconify/react';
 import { icons } from '../../../utils/icons';
 import BlueGradientBtn from '../Buttons/BlueGradientBtn';
-import SliderAbsoluteButtons from '../Buttons/SliderAbsoluteButtons';
+import headerPlaceholder from '../../../assets/headerPlaceholder.jpg';
 
 
 
 function Poster() {
     return (
-        <div className='w-[95%] md:w-[80%] lg:w-[70%] xl:w-[60%] max-w-[768px] py-4 px-4 flex flex-col justify-between gap-4 sm:gap-6'>
+        <div className='w-[95%] md:w-[80%] lg:w-[70%] xl:w-[60%] max-w-[768px] flex flex-col justify-between gap-4 sm:gap-6'>
             <ul className='w-full flex flex-wrap gap-4 text-sm md:text-[1rem]'>
                 <li className='font-bold text-secondary-color hover:text-secondary-hover-color transition-all'>Action</li>
                 <li className='font-bold text-secondary-color hover:text-secondary-hover-color transition-all'>Thriller</li>
@@ -47,18 +47,21 @@ function Poster() {
 
 function Header({ children }) {
     return (
-        <div className='w-full h-auto xxs:aspect-video min-h-[400px] max-h-screen flex flex-col relative overflow-hidden'>
-            <iframe 
+        <div className='w-full h-auto xxs:aspect-video min-h-[500px] max-h-screen flex flex-col relative overflow-hidden group' style={{
+            backgroundImage: `url(${headerPlaceholder})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}>
+            {/* <iframe 
                 className='w-full h-full absolute' 
                 src="https://www.youtube.com/embed/6ZfuNTqbHE8?si=5Sjai3MldcnSv4zZ?mute=1&autoplay=1"
                 title="YouTube video player" 
-            />
+            /> */}
             <div className='w-full h-full absolute inner-box-shadow-xl'></div>
             {children}
-            <div className='flex-grow relative flex items-center px-2 lg:px-14'>
+            <div className='flex-grow relative flex items-center px-2 lg:px-16'>
                 <Poster />
             </div>
-            <SliderAbsoluteButtons />
         </div>
    )
 }

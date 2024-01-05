@@ -5,22 +5,6 @@ import { Icon } from "@iconify/react";
 import { icons } from "../../../utils/icons";
 
 
-function isChildElementVisible(parentElement, childElement) {
-  if (!parentElement || !childElement) {
-    return false;
-  }
-
-  const parentRect = parentElement.getBoundingClientRect();
-  const childRect = childElement.getBoundingClientRect();
-
-  return (
-    childRect.top >= parentRect.top &&
-    childRect.left >= parentRect.left &&
-    childRect.bottom <= parentRect.bottom &&
-    childRect.right <= parentRect.right
-  );
-}
-
 
 
 function CardSlider({ name, children}) {
@@ -61,18 +45,20 @@ function CardSlider({ name, children}) {
   }, [sliderWidth])
 
   return (
-    <div ref={sliderRef} className="w-full h-auto flex flex-col gap-4 relative overflow-hidden py-8">
-      <div className="w-full flex justify-between">
-        <h1 className="text-[1.1rem] font-semibold">{name}</h1>
-        <button className="text-[0.8rem] font-bold flex items-center ">
-          <span>View all</span>
-          <Icon icon={icons.right} fontSize={18} />
-        </button>
+    <div className="w-full h-auto px-2 lg:px-16 py-8">
+      <div ref={sliderRef} className="w-full h-auto overflow-hidden relative group">
+        <div className="w-full flex justify-between py-2">
+          <h1 className="text-[1.1rem] font-semibold">{name}</h1>
+          <button className="text-[0.8rem] font-bold items-center hidden group-hover:flex transition-all ">
+            <span>View all</span>
+            <Icon icon={icons.right} fontSize={18} />
+          </button>
+        </div>
+        <div ref={cardContainer} className="w-fit h-auto flex gap-2">
+          {children}
+        </div>
+        <SliderAbsoluteButtons onClickLeft={handlePrev} onClickRight={handleNext} />
       </div>
-      <div ref={cardContainer} className="w-fit h-auto flex gap-2">
-        {children}
-      </div>
-      <SliderAbsoluteButtons onClickLeft={handlePrev} onClickRight={handleNext} />
     </div>
   );
 }

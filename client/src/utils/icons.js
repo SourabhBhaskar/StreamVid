@@ -2,6 +2,7 @@
 
 export const icons = {
     animatedSearchingIcon: "svg-spinners:eclipse-half",
+    add: "mingcute:add-fill",
     dot:"mdi:dot",
     expend: "iconoir:nav-arrow-down",
     language: "material-symbols:language",

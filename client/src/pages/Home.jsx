@@ -2,7 +2,12 @@ import React from 'react';
 import Nav from '../components/Home/Nav/Nav';
 import Header from '../components/Home/Header/Header';
 import CardSlider from '../components/Home/Cards/CardSlider';
-import BigCard from '../components/Home/Cards/BigCard';
+import Card1 from '../components/Home/Cards/Card1';
+import ShutterCard from '../components/Home/Cards/ShutterCard';
+import AdultBanner from '../components/Home/Banners/AdultBanner';
+import WatchTrailerBanner from '../components/Home/Banners/WatchTrailerBanner';
+import CirlceCard from '../components/Home/Cards/CirlceCard';
+import NewsCard from '../components/Home/Cards/NewsCard';
 
 
 
@@ -13,50 +18,117 @@ function Home() {
       <Header>
         <Nav />
       </Header>
-      <div className='w-full h-auto px-2 lg:px-16 overflow-hidden'>
-        <CardSlider name={'Trending Movies'}>
-          <BigCard />
-          <BigCard />
-          <BigCard />
-          <BigCard />
-          <BigCard />
-          <BigCard />
-          <BigCard />
-          <BigCard />
-          <BigCard />
-          <BigCard />
-          <BigCard />
-          <BigCard />
-          <BigCard />
-          <BigCard />
-          <BigCard />
-          <BigCard />
-          <BigCard />
-        </CardSlider>
-      </div>
-      <div className='w-full h-auto px-2 lg:px-16 overflow-hidden'>
-        <CardSlider name={'New Release'}>
-          <BigCard />
-          <BigCard />
-          <BigCard />
-          <BigCard />
-          <BigCard />
-          <BigCard />
-          <BigCard />
-          <BigCard />
-          <BigCard />
-          <BigCard />
-          <BigCard />
-          <BigCard />
-          <BigCard />
-          <BigCard />
-          <BigCard />
-          <BigCard />
-          <BigCard />
-        </CardSlider>
-      </div>
+      <CardSlider name={'Trending Movies'}>
+        <Card1 />
+        <Card1 />
+        <Card1 />
+        <Card1 />
+        <Card1 />
+        <Card1 />
+        <Card1 />
+        <Card1 />
+        <Card1 />
+        <Card1 />
+        <Card1 />
+        <Card1 />
+        <Card1 />
+        <Card1 />
+        <Card1 />
+        <Card1 />
+        <Card1 />
+      </CardSlider>
+      <CardSlider name={'New Release'}>
+        <Card1 />
+        <Card1 />
+        <Card1 />
+        <Card1 />
+        <Card1 />
+        <Card1 />
+        <Card1 />
+        <Card1 />
+        <Card1 />
+        <Card1 />
+        <Card1 />
+        <Card1 />
+        <Card1 />
+        <Card1 />
+        <Card1 />
+        <Card1 />
+        <Card1 />
+      </CardSlider>
+      <AdultBanner />
+      <CardSlider name={'Deals of the Week'}>
+        <ShutterCard />
+        <ShutterCard />
+        <ShutterCard />
+        <ShutterCard />
+        <ShutterCard />
+        <ShutterCard />
+        <ShutterCard />
+        <ShutterCard />
+        <ShutterCard />
+        <ShutterCard />
+        <ShutterCard />
+        <ShutterCard />
+        <ShutterCard />
+        <ShutterCard />
+        <ShutterCard />
+        <ShutterCard />
+        <ShutterCard />
+        <ShutterCard />
+        <ShutterCard />
+        <ShutterCard />
+        <ShutterCard />
+        <ShutterCard />
+        <ShutterCard />
+        <ShutterCard />
+        <ShutterCard />
+        <ShutterCard />
+      </CardSlider>
+      <WatchTrailerBanner />
+      <CardSlider name={'Top Artist'}>
+        <CirlceCard />
+        <CirlceCard />
+        <CirlceCard />
+        <CirlceCard />
+        <CirlceCard />
+        <CirlceCard />
+        <CirlceCard />
+        <CirlceCard />
+        <CirlceCard />
+        <CirlceCard />
+        <CirlceCard />
+        <CirlceCard />
+        <CirlceCard />
+        <CirlceCard />
+        <CirlceCard />
+        <CirlceCard />
+        <CirlceCard />
+        <CirlceCard />
+        <CirlceCard />
+      </CardSlider>
+      <CardSlider name={'Top News'}>
+        <NewsCard />
+        <NewsCard />
+        <NewsCard />
+        <NewsCard />
+        <NewsCard />
+        <NewsCard />
+        <NewsCard />
+        <NewsCard />
+        <NewsCard />
+        <NewsCard />
+        <NewsCard />
+        <NewsCard />
+        <NewsCard />
+        <NewsCard />
+        <NewsCard />
+        <NewsCard />
+        <NewsCard />
+      </CardSlider>
     </div>
   )
 }
 
 export default Home;
+
