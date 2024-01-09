@@ -30,7 +30,8 @@ module.exports = {
         'secondary-color': '#7b61ff',
         'secondary-hover-color': '#ffffff',
         'light-color': '#ebebeb55',
-        'light-hover-color': '#ffffff'
+        'light-hover-color': '#ffffff',
+        'lighter-color': '#ebebeb11'
       },
 
       outlineColor: {
@@ -55,7 +56,8 @@ module.exports = {
         'primary-color': '#00031c',
         'primary-hover-color': '#191c33',
         'secondary-color': '#7b61ff',
-        'secondary-hover-color': '#191c33aa',
+        'footer-color': '#161934',
+        'sub-footer-color': '#161934',
       },
 
       fontFamily: {

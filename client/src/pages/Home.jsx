@@ -8,124 +8,21 @@ import AdultBanner from '../components/Home/Banners/AdultBanner';
 import WatchTrailerBanner from '../components/Home/Banners/WatchTrailerBanner';
 import CirlceCard from '../components/Home/Cards/CirlceCard';
 import NewsCard from '../components/Home/Cards/NewsCard';
+import Footer from '../components/Home/Footer/Footer';
+import SubFooter from '../components/Home/Footer/SubFooter';
 
 
 
 function Home() {
 
   return (
-    <div className='w-full h-full'>
+    <div className='w-full h-full border-2'>
       <Header>
         <Nav />
       </Header>
-      <CardSlider name={'Trending Movies'}>
-        <Card1 />
-        <Card1 />
-        <Card1 />
-        <Card1 />
-        <Card1 />
-        <Card1 />
-        <Card1 />
-        <Card1 />
-        <Card1 />
-        <Card1 />
-        <Card1 />
-        <Card1 />
-        <Card1 />
-        <Card1 />
-        <Card1 />
-        <Card1 />
-        <Card1 />
-      </CardSlider>
-      <CardSlider name={'New Release'}>
-        <Card1 />
-        <Card1 />
-        <Card1 />
-        <Card1 />
-        <Card1 />
-        <Card1 />
-        <Card1 />
-        <Card1 />
-        <Card1 />
-        <Card1 />
-        <Card1 />
-        <Card1 />
-        <Card1 />
-        <Card1 />
-        <Card1 />
-        <Card1 />
-        <Card1 />
-      </CardSlider>
-      <AdultBanner />
-      <CardSlider name={'Deals of the Week'}>
-        <ShutterCard />
-        <ShutterCard />
-        <ShutterCard />
-        <ShutterCard />
-        <ShutterCard />
-        <ShutterCard />
-        <ShutterCard />
-        <ShutterCard />
-        <ShutterCard />
-        <ShutterCard />
-        <ShutterCard />
-        <ShutterCard />
-        <ShutterCard />
-        <ShutterCard />
-        <ShutterCard />
-        <ShutterCard />
-        <ShutterCard />
-        <ShutterCard />
-        <ShutterCard />
-        <ShutterCard />
-        <ShutterCard />
-        <ShutterCard />
-        <ShutterCard />
-        <ShutterCard />
-        <ShutterCard />
-        <ShutterCard />
-      </CardSlider>
-      <WatchTrailerBanner />
-      <CardSlider name={'Top Artist'}>
-        <CirlceCard />
-        <CirlceCard />
-        <CirlceCard />
-        <CirlceCard />
-        <CirlceCard />
-        <CirlceCard />
-        <CirlceCard />
-        <CirlceCard />
-        <CirlceCard />
-        <CirlceCard />
-        <CirlceCard />
-        <CirlceCard />
-        <CirlceCard />
-        <CirlceCard />
-        <CirlceCard />
-        <CirlceCard />
-        <CirlceCard />
-        <CirlceCard />
-        <CirlceCard />
-      </CardSlider>
-      <CardSlider name={'Top News'}>
-        <NewsCard />
-        <NewsCard />
-        <NewsCard />
-        <NewsCard />
-        <NewsCard />
-        <NewsCard />
-        <NewsCard />
-        <NewsCard />
-        <NewsCard />
-        <NewsCard />
-        <NewsCard />
-        <NewsCard />
-        <NewsCard />
-        <NewsCard />
-        <NewsCard />
-        <NewsCard />
-        <NewsCard />
-      </CardSlider>
+      <Footer>
+        <SubFooter />
+      </Footer>
     </div>
   )
 }

@@ -33,12 +33,12 @@ function ShutterCard() {
 
   return (
     <div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} className='w-[110px] sm:w-[200px] h-auto overflow-hidden relative'>
-        <div className='w-[110px] h-[155px] rounded-md relative' style={{
+        <div className='w-[200px] h-auto rounded-md relative' style={{
             backgroundImage: `url("https://images.unsplash.com/photo-1604200213928-ba3cf4fc8436?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")`,
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}>
-            <div ref={cardRef} className='w-[110px] h-[155px] flex flex-col gap-4 justify-center rounded-md p-3 bg-primary-hover-color translate-x-10 '>
+            <div ref={cardRef} className='w-full aspect-[2/3] flex flex-col gap-4 justify-center rounded-md p-3 bg-primary-hover-color translate-x-10 '>
                 <h1 className='w-full truncate font-primary-font-bold text-primary-color hover:text-primary-hover-color transition-all'>John Wick</h1>
                 <ul className='flex items-center font-semibold text-[0.75rem]'>
                     <li className='text-secondary-color hover:text-secondary-hover-color'>Action</li>
