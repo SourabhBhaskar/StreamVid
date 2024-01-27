@@ -17,12 +17,7 @@ function Home() {
 
   return (
     <div className='w-full h-full border-2'>
-      <Header>
-        <Nav />
-      </Header>
-      <Footer>
-        <SubFooter />
-      </Footer>
+      <Nav />
     </div>
   )
 }

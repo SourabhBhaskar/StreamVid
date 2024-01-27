@@ -6,7 +6,7 @@ import Appstore from "../../../assets/appstore.png";
 
 function FooterLogoSection() {
   return (
-    <div className="flex flex-col gap-4">
+    <div className="w-full lg:w-auto flex flex-col gap-4">
       <img src={Logo} className="w-[200px]" />
       <div>
         <p className="text-sm py-1">Connect with us</p>

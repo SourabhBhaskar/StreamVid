@@ -57,7 +57,7 @@ function Footer({ children }) {
 
   return (
     <div className="w-full h-auto bg-footer-color">
-        <footer className="w-full flex justify-between flex-wrap gap-4 px-2 xl:p-16 ">
+        <footer className="w-full flex flex-wrap lg:justify-between gap-y-4 px-2 py-16 xl:p-16">
             <FooterLogoSection />
             <FooterListSection title="Must Watch Movies" links={mustWatchMovies} />
             <FooterListSection title="Genres" links={genres} />
