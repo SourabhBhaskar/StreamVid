@@ -1,0 +1,73 @@
+export const movieList = [
+    {
+      id: 1,
+      title: "Inception",
+      genre: "Sci-Fi",
+      releaseYear: 2010,
+      director: "Christopher Nolan",
+    },
+    {
+      id: 2,
+      title: "The Shawshank Redemption",
+      genre: "Drama",
+      releaseYear: 1994,
+      director: "Frank Darabont",
+    },
+    {
+      id: 3,
+      title: "The Dark Knight",
+      genre: "Action",
+      releaseYear: 2008,
+      director: "Christopher Nolan",
+    },
+    {
+      id: 4,
+      title: "Pulp Fiction",
+      genre: "Crime",
+      releaseYear: 1994,
+      director: "Quentin Tarantino",
+    },
+    {
+      id: 5,
+      title: "Forrest Gump",
+      genre: "Drama",
+      releaseYear: 1994,
+      director: "Robert Zemeckis",
+    },
+    {
+      id: 6,
+      title: "The Matrix",
+      genre: "Action",
+      releaseYear: 1999,
+      director: "The Wachowskis",
+    },
+    {
+      id: 7,
+      title: "Titanic",
+      genre: "Romance",
+      releaseYear: 1997,
+      director: "James Cameron",
+    },
+    {
+      id: 8,
+      title: "Jurassic Park",
+      genre: "Adventure",
+      releaseYear: 1993,
+      director: "Steven Spielberg",
+    },
+    {
+      id: 9,
+      title: "The Godfather",
+      genre: "Crime",
+      releaseYear: 1972,
+      director: "Francis Ford Coppola",
+    },
+    {
+      id: 10,
+      title: "Interstellar",
+      genre: "Sci-Fi",
+      releaseYear: 2014,
+      director: "Christopher Nolan",
+    },
+  ];
+  

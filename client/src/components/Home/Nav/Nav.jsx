@@ -1,26 +1,23 @@
 import React from "react";
 import NavigationLogo from "./NavigationLogo";
-import NavigationItemList from "./NavigationItemList";
+import NavigationList from "./NavigationList";
 import NavigationSearch from "./NavigationSearch";
-import NavigationMenu from "./NavigationMenu";
 import BlueGradientBtn from "../Buttons/BlueGradientBtn";
+import NavigationMenu from "./NavigationMenu";
 
 
-// Navigation
 function Navigation() {
-
-
   return (
-    <nav className="w-full h-[75px] relative flex flex-wrap items-center justify-between px-2 lg:px-16 py-4 gap-y-4">
-      <div className="w-auto h-full flex items-center gap-4">
-        <span className="h-full flex items-center"><NavigationLogo /></span>
-        <span className="h-full hidden md:flex items-center"><NavigationItemList /></span>
+    <nav className="w-full h-[75px] py-4 px-2 xl:px-16 flex justify-between items-center">
+      <div className="flex items-center gap-4">
+        <div className="w-auto h-full"><NavigationLogo /></div>
+        <div className="w-auto h-full hidden md:flex"><NavigationList /></div>
       </div>
-      {/* <div className="w-auto h-full flex items-center gap-4">
-        <span className="h-full hidden xl:flex items-center"><NavigationSearch /></span>
-        <span className="h-full w-[160px] hidden xl:flex items-center"><BlueGradientBtn text={'Subscribe'} /></span>
-        <span className="h-full xl:hidden flex items-center"><NavigationMenu homepageCategories={homepageCategories} movieCategories={movieCategories} tvShowCategories={tvShowCategories} webSeriesCategories={webSeriesCategories} sportsCategories={sportsCategories} /></span>
-      </div> */}
+      <div className="h-full flex gap-4">
+        <div className="w-auto h-full hidden lg:flex"><NavigationSearch /></div>
+        <div className="w-[160px] hidden xl:flex"><BlueGradientBtn text={'Subscribe'} /></div>
+        <div className="w-auto h-full xl:hidden"><NavigationMenu /></div>
+      </div>
     </nav>
   );
 }

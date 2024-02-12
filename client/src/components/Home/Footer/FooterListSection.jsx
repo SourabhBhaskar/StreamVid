@@ -22,12 +22,7 @@ function FooterListSection({ title, links }) {
 
   return (
     <div className='w-full xs:w-1/2 lg:w-auto'>
-      <div className='flex items-center gap-1'>
-        <h1 onClick={() => setExpand(!expand)} className='py-1 font-semibold text-[0.8rem] cursor-pointer'>
-          {title}
-        </h1>
-        <Icon icon={icons.expend} className={`lg:hidden transition-all duration-500 ${expand ? 'rotate-180' : 'rotate-0'}`} />
-      </div>
+      <h1 className='font-semibold text-sm py-2'>{title}</h1>
       <ul ref={listRef} className='overflow-hidden '>
         {links.map((link, index) => (
           <li key={index} className='text-sm py-[2px] text-light-color hover:text-light-hover-color'>

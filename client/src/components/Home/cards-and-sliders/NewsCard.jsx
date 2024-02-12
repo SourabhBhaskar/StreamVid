@@ -1,6 +1,7 @@
-import React from 'react'
+import React from 'react';
 
-function NewCard() {
+
+function NewsCard() {
   return (
     <div className='w-screen max-w-[450px] h-[200px] flex overflow-hidden'>
       <div className='w-[150px] h-full flex-shrink-0 overflow-hidden'>
@@ -18,4 +19,4 @@ function NewCard() {
   )
 }
 
-export default NewCard
+export default NewsCard;

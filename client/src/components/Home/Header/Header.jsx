@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Icon } from '@iconify/react';
 import { icons } from '../../../utils/icons';
 import BlueGradientBtn from '../Buttons/BlueGradientBtn';
@@ -6,7 +6,7 @@ import headerPlaceholder from '../../../assets/headerPlaceholder.jpg';
 
 
 
-function Poster() {
+function ContentPostInfo() {
     return (
         <div className='w-[95%] md:w-[80%] lg:w-[70%] xl:w-[60%] max-w-[768px] flex flex-col justify-between gap-4 sm:gap-6'>
             <ul className='w-full flex flex-wrap gap-4 text-sm md:text-[1rem]'>
@@ -45,22 +45,25 @@ function Poster() {
 }
 
 
-function Header({ children }) {
+function Header() {
+    const [videoId, setVideoId] = useState("6ZfuNTqbHE8");
+    const [posterId, setPosterId] = useState("");
+    const [trandingList, setTrandingList] = useState([]);
+
     return (
-        <div className='w-full h-auto xxs:aspect-video min-h-[500px] max-h-screen flex flex-col relative overflow-hidden group' style={{
+        <div className='w-full h-auto xxs:aspect-video min-h-[500px] max-h-screen flex flex-col relative overflow-hidden group transition-all ' style={{
             backgroundImage: `url(${headerPlaceholder})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}>
-            {/* <iframe 
+            <iframe 
+                // src={`https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&controls=0&loop=1`}
                 className='w-full h-full absolute' 
-                src="https://www.youtube.com/embed/6ZfuNTqbHE8?si=5Sjai3MldcnSv4zZ?mute=1&autoplay=1"
                 title="YouTube video player" 
-            /> */}
+            />
             <div className='w-full h-full absolute inner-box-shadow-xl'></div>
-            {children}
             <div className='flex-grow relative flex items-center px-2 lg:px-16'>
-                <Poster />
+                <ContentPostInfo />
             </div>
         </div>
    )
